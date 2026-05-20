@@ -36,11 +36,14 @@ public class OrderService {
         for (CreateOrderItemRequest itemRequest : request.items()) {
             Product product = findProduct(products, itemRequest.productId());
 
-            OrderItem item = new OrderItem();
-            item.setId((long) product.id());
-            item.setProductTitle(product.title());
-            item.setPrice(item.getPrice());
-            item.setQuantity(itemRequest.quantity());
+            OrderItem item = new OrderItem(
+                    product.id(),
+                    product.title(),
+                    product.price(),
+                    itemRequest.quantity()
+            );
+
+
 
             order.addItem(item);
         }

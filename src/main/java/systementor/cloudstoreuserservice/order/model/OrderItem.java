@@ -23,8 +23,7 @@ public class OrderItem {
     public OrderItem() {
     }
 
-    public OrderItem(Long id, long productId, String productTitle, Double price, int quantity) {
-        this.id = id;
+    public OrderItem(long productId, String productTitle, Double price, int quantity) {
         this.productId = productId;
         this.productTitle = productTitle;
         this.price = price;

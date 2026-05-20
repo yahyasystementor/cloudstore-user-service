@@ -12,7 +12,7 @@ import java.util.List;
 public class ProductClient {
 
     private final RestClient restClient;
-    private final String fakestoreServiceUrl = "https://fakestoreservice-env.eba-qva25xqa.eu-north-1.elasticbeanstalk.com/products";
+    private final String fakestoreServiceUrl = "http://fakestoreservice-env.eba-qva25xqa.eu-north-1.elasticbeanstalk.com/products";
 
     public ProductClient(RestClient.Builder builder) {
         this.restClient = builder
